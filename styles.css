@@ -5,6 +5,7 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* HERO SECTION  */
 .hero__section{
     background: url(./images/heroSectionBackground.png);
     min-height: 60vh;
@@ -50,15 +51,102 @@
     gap: 32px;
 }
 
-
 .hero__section_logo{
-    width: 200px;
+    width: 300px;
     height: auto;
-    
+    margin-top: 60px;
+}
+
+.hero__section_title{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.hero__section_input_container{
+    background-color: white;
+    display: flex;
+    padding: 10px;
+    width: 50%;
+    gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_container_location, .input_container_search{
+    padding: 6px;
+    border: none;
+    outline: none;
+}
+
+.input_container_location{
+    width: 35%;
+    border-right: 2px solid grey;
+}
+
+.input_container_search{
+    width: 65%;
+}
+
+/* OFFER SECTION  */
+.container__we_offer{
+    width: 90%;
+    margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.we__offer_card{
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid grey;
+    margin: auto 5px;
+    transition: all 0.25s ease;
+}
+
+.we__offer_card:hover{
+    transform: scale(1.05);
+}
+
+.we__offer_card img{
+    width: 120%;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.we__offer_card .img1{
+    width: 110%;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.we__offer_content{
+    padding: 0 20px 15px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.we__offer_content h2{
+    color: rgb(54, 54, 54);
+    font-weight: 500;
+}
+
+.we__offer_content p{
+    color: rgb(79, 79, 79);
+    font-weight: 400;
 }
 
 
 
+
+
+/* MEDIA QUERY */
 @media only screen and (max-width: 500px){
     .navbar__menu_container .user__icon{
         display: flex;
@@ -71,5 +159,20 @@
     }
     .navbar{
         padding: 16px;
+    }
+    .hero__section_input_container{
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+        height: calc(80vh-60px);
+    }
+    .input_container_location, .input_container_search{
+        border-radius: 10px;
+        padding: 15px;
+        width: 95%;
+    }
+    .hero__section_title{
+        width: 95px;
+        font-size: 20px;
     }
 }
